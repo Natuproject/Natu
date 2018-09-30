@@ -1,0 +1,26 @@
+[Unit]
+Description=NATU's distributed currency daemon
+After=network.target
+
+[Service]
+User=natu
+Group=natu
+
+Type=forking
+PIDFile=/var/lib/natud/natud.pid
+
+ExecStart=/usr/bin/natud -daemon -pid=/var/lib/natud/natud.pid \
+          -conf=/etc/natu/natu.conf -datadir=/var/lib/natud
+
+ExecStop=-/usr/bin/natu-cli -conf=/etc/natu/natu.conf \
+         -datadir=/var/lib/natud stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

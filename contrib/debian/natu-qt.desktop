@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NATU
+Comment=NATU P2P Cryptocurrency
+Comment[fr]=NATU, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=NATU, eşten eşe kriptografik sanal para birimi
+Exec=natu-qt %u
+Terminal=false
+Type=Application
+Icon=natu128
+MimeType=x-scheme-handler/natu;
+Categories=Office;Finance;
