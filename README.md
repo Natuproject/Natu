@@ -11,9 +11,7 @@ Masternode colletral: 5000 NATU
 
 Masternode rewards: 85%
 
-Block reward till block: 6000 - 1 NATU
-
-POS start block: 600
+POS start block: 500
 
 Block Timer: 60 seconds
 
